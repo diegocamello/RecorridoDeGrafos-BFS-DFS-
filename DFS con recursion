@@ -1,0 +1,22 @@
+  método DFS( origen):
+      creamos una pila S
+      agregamos origen a la pila S
+      marcamos origen como visitado
+      mientras S no este vacío:
+          sacamos un elemento de la pila S llamado v
+          para cada vertice w adyacente a v en el Grafo: 
+              si w no ah sido visitado:
+                 marcamos como visitado w
+                 insertamos w dentro de la pila S
+                 
+                 
+                 //parte recursia
+                 
+                 
+                 
+  método DFS( origen):
+      marcamos origen como visitado 
+          para cada vertice v adyacente a origen en el Grafo: 
+              si v no ah sido visitado:
+                 marcamos como visitado v
+                 llamamos recursivamente DFS( v )               
