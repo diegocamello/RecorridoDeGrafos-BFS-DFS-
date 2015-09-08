@@ -1,22 +1,53 @@
-  método DFS( origen):
-      creamos una pila S
-      agregamos origen a la pila S
-      marcamos origen como visitado
-      mientras S no este vacío:
-          sacamos un elemento de la pila S llamado v
-          para cada vertice w adyacente a v en el Grafo: 
-              si w no ah sido visitado:
-                 marcamos como visitado w
-                 insertamos w dentro de la pila S
-                 
-                 
-                 //parte recursiva
-                 
-                 
-                 
-  método DFS( origen):
-      marcamos origen como visitado 
-          para cada vertice v adyacente a origen en el Grafo: 
-              si v no ah sido visitado:
-                 marcamos como visitado v
-                 llamamos recursivamente DFS( v )               
+#include <stdio.h>
+
+typedef struct nodo{
+        int nombre;
+        int distancia;    
+        char color[10];
+        int td:
+        int tf;
+}Nodo;
+
+
+int tiempo;  /* global */
+int d[N], f[N], padre[N], color[N]; /* Arreglos de tiempo de entrada, tiempo de salida,  padres, y color */
+
+DFS(G){   /* pseudo-código */	
+
+       for(cada vértice u (pertenece) V[G]){		
+                color [u] = Blanco;		
+                padre[u] = NULL;	
+       }	
+       tiempo = 0;	
+       for(cada vértice  u (pertenece) V[G]{		
+                if (color[u] == Blanco){			
+                        DFS_visit(u);
+                }        
+       }                 
+}
+
+DFS_visit (u){  /* pseudo-código */	
+          color [u]= Plomo;  /* Vértice Blanco u es visitado, ingresamos a su sub-árbol */ 	
+          d[u] = ++tiempo; /* el tiempo avanza  cada vez que “entramos o salimos” de un nodo*/	
+          for( cada v ? Adj [u] ){  /* explora arcos (u,v) */		
+                if(color [v] == Blanco){ /* v no ha sido visitado */			
+                       padre[v] = u;   /* u es el padre de v, se llegó a v vía u. */ 			
+                       DFS_visit(v);		
+                }	
+          }	
+          color[u] = Negro;   /* ennegrezca u, salimos de su sub-árbol */ 	
+          f[u] = ++tiempo;
+}
+
+
+
+
+int main(){
+  
+    
+    
+    
+    
+    return 0;    
+}
+             
