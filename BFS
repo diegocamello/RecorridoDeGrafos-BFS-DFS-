@@ -1,18 +1,10 @@
-BFS(G, s)   //pseudocodigo algoritmo bfs
-1 para cada v´ertice u ∈ V [G]
-2       hacer color[u] ←blanco
-3            d[u] ← ∞
-4            π[u] ← nil
-5 color[s] ← gris
-6 d[s] ← 0
-7 π[s] ← nil
-8 Q ← {s}
-9 mientras Q = ∅
-10        hacer u ← Extrae[Q]
-11             para cada v ∈ Adyacentes[u]
-12                 hacer si color[v] = blanco
-13                       entonces color[v] ← gris
-14                              d[v] ← d[u]+1
-15                              π[v] ← u
-16                             Inserta(Q, v)
-17             color[u] ← negro
+  método BFS(Grafo,origen):
+      creamos una cola Q
+      agregamos origen a la cola Q
+      marcamos origen como visitado
+      mientras Q no este vacío:
+          sacamos un elemento de la cola Q llamado v
+          para cada vertice w adyacente a v en el Grafo: 
+              si w no ah sido visitado:
+                 marcamos como visitado w
+                 insertamos w dentro de la cola Q
