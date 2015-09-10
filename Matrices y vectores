@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+
+//---------------------------------------
+int inicializar_vectores(int vector[]){
+  
+    vector[0] = 1;
+    vector[1] = 2;
+    vector[2] = 3;
+    vector[3] = 4;
+    vector[4] = 5;
+    vector[5] = 6;
+    
+    return vector[6];
+}    
+//----------------------------------------
+
+//------------------------------------
+int inicializar_arreglo(int arreglo[6][6]){
+    //almacena la distancia entre los hoteles o nodos
+    arreglo[0][1] = 40; arreglo[0][3] = 29;
+    arreglo[1][0] = 40; arreglo[1][2] = 80; arreglo[1][4] = 32; arreglo[1][5] = 100;
+    arreglo[2][1] = 80; arreglo[2][5] = 15;
+    arreglo[3][0] = 29; arreglo[3][4] = 39;
+    arreglo[4][1] = 32; arreglo[4][3] = 39;
+    arreglo[5][1] = 100; arreglo[5][2] = 15;
+    return arreglo[6][6];    
+};
+//-----------------------------
+int main(){
+    char vector[6];
+    int arreglo[6][6];
+    inicializar_vectores(vector);
+    inicializar_arreglo(arreglo);
+    
+    
+    
+    
+    return 0;    
+}
