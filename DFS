@@ -1,0 +1,33 @@
+Una familia se va de vacaciones a un lugar muy lejano y para llegar bien a destino necesitan hacer paradas para dormir en diferentes hoteles (hotel A, B, C, D y E).
+Se buscara en el grafo el camino más corto para llegar al hotel más económico, se tomara en cuenta que la familia se encuentra en el hotel A (nodo inicio) y deberá llegar al hotel E (nodo final).
+Hotel A: $45.000 la noche. Hotel B: $78.000 la noche. Hotel C: $57.000 la noche. Hotel D: $150.000 la noche.
+Hotel E: $39.000 la noche. (información indiferente para el contexto del problema).
+
+Algoritmo “Breadth-first search” (BFS)
+
+•	Inicialmente el algoritmo colorea los vértices con blanco. Luego éstos pasan a plomo y luego negro. El color plomo es usado para definir la frontera entre lo ya descubierto o explorado y lo por visitar.
+•	BFS(G,s) {   /* pseudo-código */
+	int d[N], p[N], color[N]; /* Arreglos de distancia, de padres, y de color */
+	QUEUE Q; /* Cola usada como estructura auxiliar */
+	for ( cada vértice u  V[G] -{s}) {
+		color [u] =Blanco;
+		d[u] = ;  /* distancia infinita si el nodo no es alcanzable */
+	}
+	color[s] =Plomo;
+	d[s] = 0;
+	p [s]=NULL;
+	Enqueue(Q, s);
+	while ( !Queue_Vacía(Q) ) {
+		u = Cabeza(Q);
+		for ( cada v  Adj [u] ) {
+			if (color [v] == Blanco) {
+				color[v]=Plomo;
+				d [v]=d [u] +1;
+				p [v] = u;
+				Enqueue(Q, v);
+			}
+		Dequeue(Q); /* se extrae u */
+		color [u] = Negro;
+	}
+}
+•	El tiempo de ejecución es O(|V|+|E|). Notar que cada nodo es encolado una vez y su lista de adyacencia es recorrida una vez también.
