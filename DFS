@@ -1,7 +1,5 @@
 Una familia se va de vacaciones a un lugar muy lejano y para llegar bien a destino necesitan hacer paradas para dormir en diferentes hoteles (hotel A, B, C, D y E).
-Se buscara en el grafo el camino más corto para llegar al hotel más económico, se tomara en cuenta que la familia se encuentra en el hotel A (nodo inicio) y deberá llegar al hotel E (nodo final).
-Hotel A: $45.000 la noche. Hotel B: $78.000 la noche. Hotel C: $57.000 la noche. Hotel D: $150.000 la noche.
-Hotel E: $39.000 la noche. (información indiferente para el contexto del problema).
+Se buscara en el grafo el camino más corto para llegar al último hotel, se tomara en cuenta que la familia se encuentra en el hotel A (nodo inicio) y deberá llegar al hotel E (nodo final).
 
 Algoritmo “Breadth-first search” (BFS)
 
@@ -31,3 +29,4 @@ Algoritmo “Breadth-first search” (BFS)
 	}
 }
 •	El tiempo de ejecución es O(|V|+|E|). Notar que cada nodo es encolado una vez y su lista de adyacencia es recorrida una vez también.
+
